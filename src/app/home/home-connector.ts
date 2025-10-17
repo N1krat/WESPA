@@ -3,7 +3,6 @@ import { HomePage } from './home-page/home-page';
 import { HomePageHeader } from './home-page-header/home-page-header';
 import { HomePageFooter } from './home-page-footer/home-page-footer';
 
-
 @Component({
   selector: 'app-home-page-connector',
   
