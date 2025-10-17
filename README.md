@@ -1,3 +1,67 @@
+
+
+# 🌐 **CivicVoice** – *Platformă digitală pentru implicare civică*
+
+> O inițiativă menită să aducă **vocea cetățenilor** mai aproape de **autorități**.  
+> Raportează, propune, votează și implică-te în dezvoltarea comunității tale! 💪
+
+---
+
+## 📝 **Descriere generală**
+
+**CivicVoice** este o aplicație **web** care permite cetățenilor să se implice activ în viața comunității, printr-un sistem transparent și colaborativ.  
+
+### Prin intermediul platformei, utilizatorii pot:
+- 📍 **Semnala probleme locale** — străzi deteriorate, iluminat public, gunoi etc.  
+- 💡 **Propune idei de infrastructură** și proiecte comunitare  
+- 🗳️ **Vota problemele și ideile** considerate prioritare  
+
+🎯 *Scopul proiectului este de a crește implicarea civică, transparența și colaborarea dintre comunități și autorități.*
+
+---
+
+## ⚙️ **Funcționalități cheie**
+
+✅ **Hartă interactivă** cu probleme și idei raportate  
+✅ **Sistem de vot și prioritizare** a propunerilor comunitare  
+✅ **Profiluri de utilizatori** și **clasamente de implicare**  
+✅ **Panou de administrare** pentru autorități și ONG-uri  
+✅ **Notificări și actualizări** privind statusul problemelor  
+
+---
+
+## 🧠 **Tehnologii utilizate**
+
+| Componentă | Tehnologie |
+|-------------|-------------|
+| 🎨 **Frontend** | [Angular](https://angular.dev/) |
+| ⚙️ **Backend** | [Node.js (Express)](https://expressjs.com/) |
+| 💾 **Bază de date** | [SQLite](https://www.sqlite.org/) |
+| 🔐 **Autentificare** | JWT, OAuth2 |
+
+---
+
+## 🚀 **Obiective principale**
+
+- 🌱 Creșterea **transparenței** între cetățeni și administrațiile locale  
+- 🤝 Promovarea **colaborării** și comunicării eficiente în comunități  
+- 🗳️ Implementarea unui **sistem de prioritizare** bazat pe votul cetățenilor  
+
+---
+
+## 💬 **Contribuții**
+
+Contribuțiile sunt **binevenite!** ❤️  
+
+Dacă dorești să ajuți la dezvoltarea platformei **CivicVoice**:
+1. Fă un **fork** al proiectului  
+2. Creează o nouă ramură:  
+   ```bash
+   git checkout -b feature/nume-functie
+
+
+
+
 # Wespa
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
