@@ -1,0 +1,68 @@
+.mainForm { 
+  margin-top: 10vh;
+  margin-right: 20vw; 
+  margin-left: 20vw;
+  margin-bottom: 10vh;
+}
+
+
+.mainForm .row > .col-md-6 {
+  display: grid;
+  gap: 1rem; 
+}
+
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  border: 2px dashed #0d6efd;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #0d6efd;
+  background-color: #f8f9fa;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.upload-box:hover {
+  background-color: #e7f1ff;
+  border-color: #0a58ca;
+  transform: scale(1.02);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  width: 130px;      
+  font-size: 0.95rem; 
+  padding: 8px 0;
+  justify-self: start; 
+}
+
+@media (max-width: 768px) {
+  .mainForm {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .submit-btn {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .upload-box {
+    height: 140px;
+    font-size: 0.9rem;
+  }
+
+  .upload-icon {
+    font-size: 2.5rem;
+  }
+}

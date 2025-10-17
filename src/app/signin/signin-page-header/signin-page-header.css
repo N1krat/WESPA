@@ -2,19 +2,19 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
-.login-btn {
-  background-color: #007bff;         /* Bootstrap blue */
-  color: white !important;           /* White text */
-  padding: 6px 16px;                 /* Inner spacing */
-  border-radius: 20px;               /* Rounded corners */
+.signin-btn {
+  background-color: #007bff;         
+  color: white !important;         
+  padding: 6px 16px;            
+  border-radius: 20px;              
   transition: all 0.3s ease;
-           /* Smooth hover effect */
+           
 }
 
-.login-btn:hover {
-  background-color: #0056b3;         /* Darker blue on hover */
-  color: #fff;                       /* Keep text white */
-  transform: scale(1.05);            /* Slight zoom */
+.signin-btn:hover {
+  background-color: #0056b3;         
+  color: #fff;                      
+  transform: scale(1.05);            
 }
 
 .nav-link { 
