@@ -18,6 +18,8 @@ db.serialize(() => {
     title TEXT,
     description TEXT,
     image_path TEXT,
+    latitude REAL,
+    longitude REAL,
     status TEXT DEFAULT 'nou',
     votes INTEGER DEFAULT 0,
     user_id INTEGER,
