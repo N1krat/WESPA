@@ -1,0 +1,44 @@
+.main-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10vh 8vw 0 8vw;
+  gap: 2rem;
+}
+
+.heading-block {
+  width: 45%;
+}
+
+.heading-block h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+}
+
+.description-block {
+  width: 45%;
+  margin-top: 0;
+}
+
+.description-block .description {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.content-name { 
+  font-family: 'Times New Roman', Times, serif;
+}
+.cards {
+  display: flex;
+  gap: 1.5rem; /* space between cards */
+  flex-wrap: wrap; /* allow cards to wrap on smaller screens */
+  justify-content: center; /* align cards to the center */
+  margin-bottom: 4rem;
+} 
+
+.selecto
