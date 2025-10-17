@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
 import { HomePageConnector } from './home/home-connector';
+import { LoginPageConnector } from './login/login-connector';
 
 export const routes: Routes = [
     {
-        path: 'lolo',
+        path: '',
         component: HomePageConnector
+    }, 
+    { 
+        path: 'login',
+        component: LoginPageConnector
     }
 ];
