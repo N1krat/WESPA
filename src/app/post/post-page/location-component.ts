@@ -1,37 +1,32 @@
-import { Component, AfterViewInit } from '@angular/core';
-import * as L from 'leaflet';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import Map from 'ol/Map';
+import View from 'ol/View';
+import TileLayer from 'ol/layer/Tile';
+import OSM from 'ol/source/OSM';
+import { fromLonLat } from 'ol/proj';
 
 @Component({
   selector: 'app-map',
-  template: `<div id="map" style="height:350px"></div>`,
-  imports: [HttpClientModule]
+  template: `<div id="map" style="width: 100%; height: 500px;"></div>`
 })
 export class MapComponent implements AfterViewInit {
-  private map!: L.Map;
+  map!: Map;
 
-  constructor(private http: HttpClient) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
-    this.initMap();
-
-    // Fetch issues from backend
-    this.http.get<any[]>('http://localhost:3000/issues').subscribe(issues => {
-      issues.forEach(issue => {
-        if (issue.latitude && issue.longitude) {
-          L.marker([issue.latitude, issue.longitude])
-            .addTo(this.map)
-            .bindPopup(`<b>${issue.title}</b><br>${issue.description}`);
-        }
+    if (isPlatformBrowser(this.platformId)) {  // rulează doar în browser
+      this.map = new Map({
+        target: 'map',
+        layers: [
+          new TileLayer({ source: new OSM() })
+        ],
+        view: new View({
+          center: fromLonLat([28.8638, 47.0105]),
+          zoom: 13
+        })
       });
-    });
-  }
-
-  private initMap(): void {
-    this.map = L.map('map').setView([47.0105, 28.8638], 13); // default centrul Chișinăului
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors',
-    }).addTo(this.map);
+    }
   }
 }
