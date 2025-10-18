@@ -8,14 +8,14 @@
                     <form>  
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email" placeholder="Enter your email">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                            <input type="password" class="form-control" [(ngModel)]="password" name="password" id="password" placeholder="Enter your password">
                         </div>
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary login-btn">Log In</button>
+                            <button type="button" class="btn btn-primary login-btn"(click)="login()">Log In</button>
                         </div>
                     </form>
                 </div>

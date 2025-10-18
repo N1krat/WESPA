@@ -1,40 +1,39 @@
-<form class="mainForm">
-  <div class="row g-4">
-  
-    <div class="col-md-6 d-grid gap-3">
-      <div>
-        <label for="title" class="form-label">Name</label>
-        <input type="text" class="form-control" id="title" placeholder="Enter your post title">
-      </div>
+<div class="row g-4">
 
-      <div>
-        <label for="description" class="form-label">Description</label>
-        <textarea class="form-control" id="description" rows="3" placeholder="Enter your post description"></textarea>
-      </div>
-
-      <div>
-        <label for="tag" class="form-label">Tag</label>
-        <input type="text" class="form-control" id="tag" placeholder="Enter your post tag">
-      </div>
-
-      <button type="submit" class="btn btn-primary submit-btn" style="width: 70%; margin-top: 20px; margin-left: 15%;">Submit</button>
+  <div class="col-md-6 d-grid gap-3">
+    <div>
+      <label for="title" class="form-label">Name</label>
+      <input type="text" class="form-control" id="title" placeholder="Enter your post title" [(ngModel)]="title" name="title">
     </div>
 
+    <div>
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" rows="3" placeholder="Enter your post description" [(ngModel)]="description" name="description"></textarea>
+    </div>
 
-    <div class="col-md-6 d-grid gap-3">
-      <div class="text-center">
-        <h5 class="mb-3">Upload Image</h5>
-        <label for="file-upload" class="upload-box" id="upload-box">
-          <i class="bi bi-cloud-arrow-up-fill upload-icon"></i>
-          <span>Click or tap to upload</span>
-        </label>
-        <input id="file-upload" type="file" accept="image/*" hidden>
-      </div>
+    <div>
+      <label for="tag" class="form-label">Tag</label>
+      <input type="text" class="form-control" id="tag" placeholder="Enter your post tag" [(ngModel)]="tag" name="tag">
+    </div>
 
-      <div>
-        <label for="location" class="form-label">Location</label>
-        <app-map></app-map>
-      </div>
+    <button type="button" class="btn btn-primary submit-btn" style="width: 70%; margin-top: 20px; margin-left: 15%;" (click)="submitIssue()">
+      Submit
+    </button>
+  </div>
+
+  <div class="col-md-6 d-grid gap-3">
+    <div class="text-center">
+      <h5 class="mb-3">Upload Image</h5>
+      <label for="file-upload" class="upload-box" id="upload-box">
+        <i class="bi bi-cloud-arrow-up-fill upload-icon"></i>
+        <span>Click or tap to upload</span>
+      </label>
+      <input id="file-upload" type="file" accept="image/*" hidden (change)="onFileSelected($event)">
+    </div>
+
+    <div>
+      <label for="location" class="form-label">Location</label>
+      <app-map></app-map>
     </div>
   </div>
-</form>
+</div>
