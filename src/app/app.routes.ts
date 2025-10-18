@@ -3,6 +3,7 @@ import { HomePageConnector } from './home/home-connector';
 import { LoginPageConnector } from './login/login-connector';
 import { SigninPageConnector } from './signin/signin-connector';
 import { PostPageConnector } from './post/post-connector';
+import { NewsPageConnector } from './news/news-component';
 
 export const routes: Routes = [
     {
@@ -20,5 +21,9 @@ export const routes: Routes = [
     { 
         path: 'post', 
         component: PostPageConnector
+    }, 
+    { 
+        path: 'news',
+        component: NewsPageConnector
     }
 ];
